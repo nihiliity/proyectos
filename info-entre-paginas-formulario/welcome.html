@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+    <script>
+        const url = new URL(location.href);
+        const nombre = url.searchParams.get('nombre');
+        const apellido = url.searchParams.get('apellido');
+
+        document.body.innerHTML = `
+            <h1>Hola ${nombre} ${apellido}!</h1>
+        `;
+    </script>
+</body>
+</html>
